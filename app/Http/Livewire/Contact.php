@@ -58,7 +58,7 @@ class Contact extends Component
         Mail::to($this->createForm['email'])->send($mail);
 
         
-        return redirect('https://bonanzaonline.io');
+        return redirect('https://bonanzasonline.com');
 
         
     }
