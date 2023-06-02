@@ -101,7 +101,7 @@
             
 
             <hr>
-            <p class="mt-2 text-sm text-gray-700">Al comptinuar con la compra y proporcionarnos tu información personal, estás aceptando los siguientes términos: Recpilamos y utilizamos tu información personal para procesar y completar tus pedidos, comunicarnos contigo, mejorar nuestros productos y servicios, y personalizar tu experiencia de compra puedes ver mas información en nuestras<a href="{{route('privacy-policies')}}" class="text-blue-500 font-semibold"> Politicas de privacidad.</a> Gracias por preferirnos.</p>
+            <p class="mt-2 text-sm text-gray-700">Al continuar con la compra y proporcionarnos tu información personal, estás aceptando los siguientes términos: Recopilamos y utilizamos tu información personal para procesar y completar tus pedidos, comunicarnos contigo, mejorar nuestros productos y servicios, y personalizar tu experiencia de compra, puedes ver más información en nuestra<a href="{{route('privacy-policies')}}" class="text-blue-500 font-semibold"> Política de privacidad.</a> Gracias por preferirnos.</p>
         </div>
 
        </div>
