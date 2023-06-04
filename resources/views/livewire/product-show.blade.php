@@ -60,7 +60,7 @@
                             <i class="fas fa-truck text-sm text-white"></i>
                         </span>
                         <div class="ml-4">
-                            <p class="text-lg font-semibold text-green-700">Se hacen envios a todo Maracay</p>
+                            <p class="text-lg font-semibold text-green-700">Se hacen envíos a todas las urbanizaciones.</p>
                             <p>Recíbelo el {{ Date::now()->addDay(1)->locale('es')->format('l j F') }}</p>
                         </div>
                     </div>
