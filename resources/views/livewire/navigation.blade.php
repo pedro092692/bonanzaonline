@@ -92,6 +92,11 @@
             @livewire('dropdown-cart')
         </div>
 
+        {{-- shopping cart --}}
+        <div class="md:hidden">
+            @livewire('cart-mobil')
+        </div>
+
     </div>
 
     <nav
@@ -137,8 +142,7 @@
                 @livewire('search')
             </div> 
 
-            {{-- shopping cart --}}
-            @livewire('cart-mobil')
+            
 
             {{-- my orders --}}
             @auth

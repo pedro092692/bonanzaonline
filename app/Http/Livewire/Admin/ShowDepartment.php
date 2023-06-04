@@ -44,7 +44,7 @@ class ShowDepartment extends Component
     public function save(){
         $this->validate([
             'createForm.name' => "required",
-            'createForm.cost' => "required|numeric|min:1|max:100"
+            'createForm.cost' => "required|numeric|min:0|max:100"
         ]);
 
         $this->department->cities()->create($this->createForm);
