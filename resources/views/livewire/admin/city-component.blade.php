@@ -9,10 +9,10 @@
         {{-- add new department --}}
         <x-form-section submit="save" class="mb-6">
             <x-slot name="title">
-                Agregar un nuevo municipio
+                Agregar un nueva urbanizacion
             </x-slot>
             <x-slot name="description">
-                Completa la informacion para poder agragar un municipio nuveo
+                Completa la informacion para poder agragar una nueva urbanizacion.
             </x-slot>
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-4">
@@ -36,11 +36,11 @@
          {{-- show all departments --}}
          <x-action-section>
             <x-slot name="title">
-                Lista de municipios
+                Lista de urbanizaciones
             </x-slot>
             
             <x-slot name="description">
-                Aqui encontra todos los municipios disponibles para 
+                Aqui encontra todos las urbanizaciones disponibles para 
                 <span class="font-bold capitalize">
                     {{$city->name}}
                 </span>

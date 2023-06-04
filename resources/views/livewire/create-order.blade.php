@@ -58,7 +58,7 @@
                     </div>
                     {{-- districts--}}
                     <div>
-                        <x-label value="Municipio" />
+                        <x-label value="Urbanización" />
                         <select class="form-control w-full" wire:model="district_id">
                             <option value="" disabled selected>Selecciona una urbanización</option>
                             @foreach ($districts as $district)
