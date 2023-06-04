@@ -62,7 +62,7 @@
                         <select class="form-control w-full" wire:model="district_id">
                             <option value="" disabled selected>Selecciona una urbanización</option>
                             @foreach ($districts as $district)
-                                <option value="{{$district->id}}">{{$district->name}}</option>
+                                <option class="capitalize" value="{{$district->id}}">{{$district->name}}</option>
                             @endforeach
                         </select>
                         <x-input-error for="district_id" />
