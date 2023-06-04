@@ -1,5 +1,5 @@
 <div class="-z-1">
-    <a href="{{route('shopping-cart')}}" class="py-2 px-4 text-md flex items-center tex-gray-500 hover:bg-green-600 hover:text-white">
+    <a href="{{route('shopping-cart')}}" class="py-2 px-4 text-md flex items-center tex-gray-500 hover:text-white">
         <span class="flex justify-center w-9">
             <i class="fa-solid fa-cart-shopping text-white"></i>
         </span>
