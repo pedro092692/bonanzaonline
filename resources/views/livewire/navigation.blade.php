@@ -92,8 +92,8 @@
             @livewire('dropdown-cart')
         </div>
 
-        {{-- shopping cart --}}
-        <div class="md:hidden">
+        {{-- shopping cart movil--}}
+        <div class="block md:hidden">
             @livewire('cart-mobil')
         </div>
 
