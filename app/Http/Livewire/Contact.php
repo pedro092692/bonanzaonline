@@ -54,9 +54,7 @@ class Contact extends Component
 
         $mail = new mailable($this->createForm);
 
-        
-        Mail::to($this->createForm['email'])->send($mail);
-
+        Mail::to('contacto@bonanzasonline.com')->send($mail);
         
         return redirect('https://bonanzasonline.com');
 
