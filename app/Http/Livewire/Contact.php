@@ -56,7 +56,7 @@ class Contact extends Component
 
         Mail::to('contacto@bonanzasonline.com')->send($mail);
         
-        return redirect('https://bonanzasonline.com');
+        return redirect('https://bonanzasonline.com/')->with('flash.banner', 'Se ha envidado su mensaje de forma exitosa, nos comunicáremos pronto.');   
 
         
     }

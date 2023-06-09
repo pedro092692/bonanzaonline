@@ -20,6 +20,8 @@ class WelcomeController extends Controller
             }
         }
 
+
+
         $categories = Category::all();
         
         return view('welcome', compact('categories'));
