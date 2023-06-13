@@ -170,13 +170,4 @@
             </div>
         </div>
     </div>
-    {{-- @push('script')
-        <script>
-            $(document).ready(function() {
-                $('.flexslider').flexslider({
-                    animation: "slide"
-                });
-            });
-        </script>
-    @endpush --}}
 </div>
