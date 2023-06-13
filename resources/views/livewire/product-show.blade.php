@@ -2,7 +2,7 @@
     <div class="container py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {{-- slider --}}
-            <div wire:ignore>
+            {{-- <div wire:ignore>
                 <div class="flexslider">
                     <ul class="slides">
                         @foreach ($product->images as $image)
@@ -13,22 +13,28 @@
                         @endforeach
                     </ul>
                 </div>
-            </div>
-            {{-- <div class="swiper">
+            </div> --}}
+            <div class="swiper">
+                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    @foreach ($product->images as $image)
-                        <div class="swiper-slide">
-                            <img src="{{ Storage::url($image->url) }}" class="aspect-square object-cover object-center" />
-                        </div>    
-                    @endforeach
+                  <!-- Slides -->
+                  @foreach ($product->images as $image)
+                    <div class="swiper-slide"><img src="{{ Storage::url($image->url) }}" class="" /></div>
+                  @endforeach
+                  ...
                 </div>
-
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div> --}}
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
             {{-- product info --}}
-            <div class="-mt-10 md:mt-0">
+            <div class="md:mt-0">
                 <h1 class="text-xl font-bold text-gray-700">{{ $product->name }}</h1>
                 <div class="flex">
                     <p class="text-gray-700">Marca: <a href=""
@@ -82,9 +88,6 @@
                     <p class="text-dm">{!! $product->description !!}</p>
                 </div>
 
-
-
-
                 {{-- product review --}}
                 @can('review', $product)
                     <div class="text-gray-700 mt-6" wire:ignore>
@@ -135,7 +138,7 @@
 
                 @if ($product->reviews->isNotEmpty())
                     <div class="mt-6 text-gray-700">
-                        <h2 class="font-bold text-lg">Resenas</h2>
+                        <h2 class="font-bold text-lg">Reseñas</h2>
                         <div class="mt-2">
                             @foreach ($product->reviews as $review)
                                 <div class="flex mt-2">
@@ -167,7 +170,7 @@
             </div>
         </div>
     </div>
-    @push('script')
+    {{-- @push('script')
         <script>
             $(document).ready(function() {
                 $('.flexslider').flexslider({
@@ -175,8 +178,5 @@
                 });
             });
         </script>
-        <script>
-            console.log(pedro);
-        </script>
-    @endpush
+    @endpush --}}
 </div>

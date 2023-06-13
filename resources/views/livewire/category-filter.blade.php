@@ -60,7 +60,9 @@
                                 <article>
                                     <figure>
                                         @if (isset($product->images->first()->url))
+                                        <a href="{{ route('products.show', $product) }}">
                                             <img src="{{ Storage::url($product->images->first()->url) }}" alt="" class="h-48 w-full object-cover object-center">
+                                        </a>
                                         @else
                                             <img src="{{ asset('images/no_available_image.png') }}" alt="" class="h-48 w-full object-cover object-center">
                                         @endif

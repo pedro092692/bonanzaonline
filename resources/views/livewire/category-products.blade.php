@@ -7,7 +7,9 @@
                         <article>
                             <figure>
                                 @if ($product->images->first()->url)
-                                    <img src="{{ Storage::url($product->images->first()->url) }}" alt="" class="h-48 w-full object-cover object-center">
+                                    <a href="{{route('products.show', $product)}}">
+                                        <img src="{{ Storage::url($product->images->first()->url) }}" alt="" class="h-48 w-full object-cover object-center">
+                                    </a>    
                                 @else
                                     
                                 @endif
