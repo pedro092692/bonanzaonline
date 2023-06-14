@@ -28,7 +28,7 @@ class FacebookLogin extends Controller
             Auth::login($userNew);
         }
 
-        return redirect('/#');
+        return redirect()->back();
     }
     
 }

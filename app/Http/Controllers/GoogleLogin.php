@@ -31,7 +31,7 @@ class GoogleLogin extends Controller
         }
     
         
-       
+        
         return redirect()->back();
         
     
