@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Routing\Route;
 
 class GoogleLogin extends Controller
 {
     public function __invoke()
     {
+        
         $user = Socialite::driver('google')->user();
         $userExists = User::where('external_id', $user->id)->where('external_auth', 'google')->orwhere('email', $user->email)->first();
         
@@ -27,7 +29,14 @@ class GoogleLogin extends Controller
 
             Auth::login($userNew);
         }
-
-        return redirect('/#');
+    
+        
+        if(Route::current()->getName() == "google.login"){
+            return redirect('/#');
+        }else{
+            return redirect()->back();
+        }
+    
+       
     }
 }
