@@ -31,11 +31,9 @@ class GoogleLogin extends Controller
         }
     
         
-        if(Route::current()->getName() == "google.login"){
-            return redirect('/#');
-        }else{
-            return redirect()->back();
-        }
+       
+        return redirect()->back();
+        
     
        
     }
