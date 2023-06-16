@@ -32,7 +32,7 @@ class GoogleLogin extends Controller
     
         
         
-        return redirect()->back();
+        return redirect('/#');
         
     
        
