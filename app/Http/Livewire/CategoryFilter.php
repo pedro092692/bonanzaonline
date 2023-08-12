@@ -6,12 +6,13 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Builder;
+use App\Models\Currency;
 
 class CategoryFilter extends Component
 {
     use WithPagination;
 
-    public $category, $subcategory_select, $brand_select;
+    public $category, $subcategory_select, $brand_select, $dollar_value;
 
     public $view = "grid";
 
@@ -67,6 +68,10 @@ class CategoryFilter extends Component
 
         $products = $productsQuery->paginate(20);
 
-        return view('livewire.category-filter', compact('products'));
+        $dollar_value = Currency::where('name', 'dollar')->latest()->first();
+        
+        $this->dollar_value = $dollar_value;
+
+        return view('livewire.category-filter', compact('products','dollar_value'));
     }
 }

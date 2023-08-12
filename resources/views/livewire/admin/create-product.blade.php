@@ -42,7 +42,10 @@
         <div class="mb-4">
             <div wire:ignore>
                 <x-label value="Descripción" />
-                <textarea class="w-full form-control" rows="4" wire:model="description" x-data x-init="ClassicEditor.create($refs.textEditor)
+                <textarea class="w-full form-control" rows="4" wire:model="description" x-data x-init="ClassicEditor.create($refs.textEditor, {
+                    removePlugins: [ 'Heading' ],
+                    toolbar: [ 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' , 'link' ]
+                    })
                     .then(function(editor) {
                         editor.model.document.on('change:data', () => {
                             @this.set('description', editor.getData())

@@ -72,7 +72,11 @@
                                             <h1 class="text-lg font-semibold">
                                                     {{ Str::limit($product->name, 20) }}
                                             </h1>
-                                            <p class="font-bold text-gray-700">US$ {{ $product->price }}</p>
+                                            @if (isset($dollar_value->value))
+                                                <p class="font-bold text-gray-700">US$ {{$product->price}} / {{ round($product->price * $dollar_value->value, 2) }} Bs </p>
+                                            @else
+                                                <p class="font-bold text-gray-700">US$ {{$product->price}} </p>
+                                            @endif
                                         </a>    
                                     </div>
                                 </article>
