@@ -20,7 +20,7 @@ class AddCartItemWeight extends Component
         $this->weights = $this->product->weights;
         $image = Storage::url($this->product->images->first());
         
-        if($image == "/storage/"){
+        if($image == "http://bonanzasonline.com/storage/"){
             $this->options['image'] = asset('images/no_available_image.png');
         }else{
             $this->options['image'] = Storage::url($this->product->images->first()->url);
