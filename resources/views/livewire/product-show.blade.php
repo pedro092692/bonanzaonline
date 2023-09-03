@@ -1,27 +1,21 @@
 <div>
     <div class="container py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            {{-- slider --}}
-            {{-- <div wire:ignore>
-                <div class="flexslider">
-                    <ul class="slides">
-                        @foreach ($product->images as $image)
-                            <li data-thumb="{{ Storage::url($image->url) }}">
-                                <img src="{{ Storage::url($image->url) }}"
-                                    class="aspect-square object-cover object-center" />
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div> --}}
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  @foreach ($product->images as $image)
-                    <div class="swiper-slide"><img src="{{ Storage::url($image->url) }}" class="" /></div>
-                  @endforeach
-                  ...
+                 
+                  @if (empty($product->images[0]))
+                    <div class="swiper-slide"><img src="{{ asset('images/no_available_image.png') }}" class="" /></div>
+                  @else
+                    @foreach ($product->images as $image)
+                        <div class="swiper-slide"><img src="{{ Storage::url($image->url) }}" class="" /></div>
+                    @endforeach
+                  @endif
+                  
+                  
+                  
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>

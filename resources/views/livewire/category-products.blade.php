@@ -6,12 +6,12 @@
                     <li class="bg-white rounded-lg shadow {{ $loop->last ? '' : 'sm:mr-4' }}">
                         <article>
                             <figure>
-                                @if ($product->images->first()->url)
-                                    <a href="{{route('products.show', $product)}}">
-                                        <img src="{{ Storage::url($product->images->first()->url) }}" alt="" class="h-48 w-full object-cover object-center">
-                                    </a>    
+                                @if (empty($product->images[0]))
+                                    <img src="{{ asset('images/no_available_image.png');}}" alt="" class="h-48 w-full object-contain">
                                 @else
-                                    
+                                    <a href="{{route('products.show', $product)}}">
+                                        <img src="{{ Storage::url($product->images->first()->url) }}" alt="" class="h-48 w-full object-contain">
+                                    </a>  
                                 @endif
                                 
                             </figure>

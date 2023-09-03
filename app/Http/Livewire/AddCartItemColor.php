@@ -17,7 +17,13 @@ class AddCartItemColor extends Component
 
     public function mount(){
         $this->colors = $this->product->colors;
-        $this->options['image'] = Storage::url($this->product->images->first()->url);
+        $image = Storage::url($this->product->images->first());
+        
+        if($image == "/storage/"){
+            $this->options['image'] = asset('images/no_available_image.png');
+        }else{
+            $this->options['image'] = Storage::url($this->product->images->first()->url);
+        }
     }
 
     public function updatedColorId($value){
