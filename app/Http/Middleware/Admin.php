@@ -19,7 +19,6 @@ class Admin
         if (!isset(Auth::user()->id)){
            abort(404);
         }
-        
         return $next($request);
     }
 }

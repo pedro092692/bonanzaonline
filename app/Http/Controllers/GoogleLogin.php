@@ -7,10 +7,11 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Route;
+use Closure;
 
 class GoogleLogin extends Controller
 {
-    public function __invoke()
+    public function __invoke(Request $request, Closure $next)
     {
         
         $user = Socialite::driver('google')->user();
@@ -32,7 +33,7 @@ class GoogleLogin extends Controller
     
         
         
-        return redirect('/#');
+        return $next($request);
         
     
        
