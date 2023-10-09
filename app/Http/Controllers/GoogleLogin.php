@@ -32,8 +32,7 @@ class GoogleLogin extends Controller
     
         
         
-        return Socialite::driver($provider)->with(["prompt" => "select_account"])->redirect();
-        
+        return back();
     
        
     }
