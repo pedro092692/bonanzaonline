@@ -27,7 +27,7 @@ class GoogleLogin extends Controller
                 'external_auth' => "google",
             ]);
 
-            Auth::login($userNew);
+            return Socialite::driver($provider)->with(["prompt" => "select_account"])->redirect();
         }
     
         
