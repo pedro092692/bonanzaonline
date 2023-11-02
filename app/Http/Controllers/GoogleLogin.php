@@ -7,15 +7,10 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Route;
-<<<<<<< HEAD
-use Closure;
-=======
-use App\Providers\RouteServiceProvider;
->>>>>>> 9e689f40eeed66c68076929badaf3c14b9f0f08e
 
 class GoogleLogin extends Controller
 {
-    public function __invoke(Request $request, Closure $next)
+    public function __invoke()
     {
         
         $user = Socialite::driver('google')->user();
@@ -37,12 +32,8 @@ class GoogleLogin extends Controller
     
         
         
-<<<<<<< HEAD
-        return $next($request);
+        return back();
         
-=======
-         return redirect(RouteServiceProvider::HOME);
->>>>>>> 9e689f40eeed66c68076929badaf3c14b9f0f08e
     
        
     }
