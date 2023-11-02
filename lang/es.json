@@ -73,8 +73,19 @@
     "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.": "Una vez que se elimine su cuenta, todos sus recursos y datos se eliminarán de forma permanente. Antes de eliminar su cuenta, descargue cualquier dato o información que desee conservar.",
     "Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.": "¿Está seguro de que desea eliminar su cuenta? Una vez que se elimine su cuenta, todos sus recursos y datos se eliminarán de forma permanente. Ingrese su contraseña para confirmar que desea eliminar su cuenta de forma permanente.",
     "Whoops! Something went wrong.": "Ey! Algo salió mal.",
-    "Hello!": "Hola",
-    "Regards": "Saludos"
+    "Hello!": "Hola!",
+    "Regards": "Saludos",
+    "Reset Password Notification ": "Restablecer la contraseña ",
+    "You are receiving this email because we received a password reset request for your account.": "Está recibiendo este correo electrónico porque recibimos una solicitud de restablecimiento de contraseña para su cuenta.",
+    "Reset Password": "Restablecer la contraseña",
+    "If you did not request a password reset, no further action is required.": "Si no solicitó un restablecimiento de contraseña, no es necesario realizar ninguna otra acción.",
+    "This password reset link will expire in": "Este enlace para restablecer contraseña caducará en",
+    "minutes.": "minutos",
+    "If you're having trouble clicking the": "Si tiene problemas para hacer clic Botón",
+    "button, copy and paste the URL below": "copia y pega la URL a continuación",
+    "into your web browser:": "en su navegador web:",
+    "All rights reserved.": "Todos los derechos reservados."
+    
 
 
 
