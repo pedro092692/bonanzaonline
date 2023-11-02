@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Route;
+<<<<<<< HEAD
 use Closure;
+=======
+use App\Providers\RouteServiceProvider;
+>>>>>>> 9e689f40eeed66c68076929badaf3c14b9f0f08e
 
 class GoogleLogin extends Controller
 {
@@ -28,13 +32,17 @@ class GoogleLogin extends Controller
                 'external_auth' => "google",
             ]);
 
-            Auth::login($userNew);
+           Auth::login($userNew);
         }
     
         
         
+<<<<<<< HEAD
         return $next($request);
         
+=======
+         return redirect(RouteServiceProvider::HOME);
+>>>>>>> 9e689f40eeed66c68076929badaf3c14b9f0f08e
     
        
     }
