@@ -33,10 +33,10 @@
                 @endforeach
             </ul>
           
-            <button aria-label="Previous" class="glider-prev">«</button>
-            <button aria-label="Next" class="glider-next">»</button>
+            <button aria-label="Previous" class="hidden md:block glider-prev">«</button>
+            <button aria-label="Next" class="hidden md:block glider-next">»</button>
             <div role="tablist" class="dots"></div>
-          </div>
+        </div>
     @else
         <div role="status" class="mb-4 h-48 flex items-center justify-center">
             <svg aria-hidden="true" class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
