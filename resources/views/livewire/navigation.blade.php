@@ -96,7 +96,12 @@
         <div class="block md:hidden">
             @livewire('cart-mobil')
         </div>
-
+    </div>
+    <div class="md:hidden container flex items-center h-16 justify-between md:justify-start">
+        {{-- search --}}  
+        <div class="flex-1 px-4">
+            @livewire('search')
+        </div> 
     </div>
 
     <nav
@@ -137,12 +142,6 @@
 
         <div class="bg-white h-full overflow-y-auto">
 
-            {{-- search --}}  
-            <div class="container  bg-gray-100 py-4 mb-2">
-                @livewire('search')
-            </div> 
-
-            
 
             {{-- my orders --}}
             @auth
