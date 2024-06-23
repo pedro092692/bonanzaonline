@@ -23,15 +23,15 @@ class DatabaseSeeder extends Seeder
         Storage::makeDirectory('subcategories');
 
         $this->call(UserSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(SubcategorySeeder::class);
-        $this->call(ProductSeeder::class);
-        $this->call(ColorSeeder::class);
-        $this->call(ColorProductSeeder::class);
-        $this->call(SizeSeeder::class);
-        $this->call(ColorSizeSeeder::class);
-        $this->call(WeightSeeder::class);
-        $this->call(ProductWeightSeeder::class);
-        $this->call(DepartmentSeeder::class);
+        // $this->call(CategorySeeder::class);
+        // $this->call(SubcategorySeeder::class);
+        // $this->call(ProductSeeder::class);
+        // $this->call(ColorSeeder::class);
+        // $this->call(ColorProductSeeder::class);
+        // $this->call(SizeSeeder::class);
+        // $this->call(ColorSizeSeeder::class);
+        // $this->call(WeightSeeder::class);
+        // $this->call(ProductWeightSeeder::class);
+        // $this->call(DepartmentSeeder::class);
     }
 }
